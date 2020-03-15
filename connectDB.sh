@@ -13,10 +13,11 @@ then
         select choice in "Create Table" "List Tables" "Drop Table" "Insert into Table" "Select From Table" "Delete From Table" "Exit"
         do 
         case $choice in 
-                "Create Table" )
-                        export dbname
-                        echo "ahmed"
-                        . ./createTb.sh
+                "Create Table" )             
+                        pwd
+                      . ../../createTb.sh
+                      pwd
+                       
                         break
                 ;;
                 "List Tables" )
