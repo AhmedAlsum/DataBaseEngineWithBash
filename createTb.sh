@@ -24,15 +24,34 @@ if [[ $colnums -gt 0 && $colnums =~ ^[0-9]+$ ]]
 then 
     echo "Enter primary key col name"
     read colname
-    if [[ $colname =~ $re ]]
+    if [[ $colname =~ $re && -n $tbname ]]
     then 
         col_names[0]=$colname
     else
         echo "Enter vailed col name "
+
     fi
+    echo "Nubmer of Columns :""$colnums" >>$tbname.md
+   # echo "Names of columns : ""$colname" >>$tbname.md
     echo "$colname">> $tbname.md
 else 
     echo "Enter Vailed number"    
-fi    
+fi  
+
+i=1
+while((i<$colnums))
+do
+    echo "Enter your next col name"
+    read colname
+    if [[ $colname =~ $re && -n $tbname ]]
+    then 
+        name[i]=$colname
+    fi
+    
+    echo "$colname">> $tbname.md
+    ((i++))  
+done
+      
+
 
 

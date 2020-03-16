@@ -32,12 +32,13 @@ then
 
                 ;;
                 "Select From Table" )
-                        echo "sdfs"
+                    . ../../selectfromtable.sh
+                        
                         break
 
                 ;;
                 "Delete From Table" )
-                    echo "sdf"
+                    . ../../deletefromtable.sh
                         break
 
                 ;;
