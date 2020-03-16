@@ -1,7 +1,7 @@
 #!/bin/bash 
 re='[a-zA-Z]'
   
-    pwd
+    
     if [ -d "../$dbname" ]; 
     then
             echo "database: $dbname"
@@ -9,9 +9,10 @@ re='[a-zA-Z]'
             then
                 echo "Empty Database"
             else
+                echo "Tables :" 
                 for table in `ls -I "*.md" ../$dbname`
                 do
-                    echo "Tables are ""$table"
+                    echo "$table"
                 done
             fi
         

@@ -22,7 +22,7 @@ then
 
                 ;;
                 "Drop Table" )
-                        echo "ahmd"
+                        . ../../droptb.sh
                         break
 
                 ;;
