@@ -6,22 +6,18 @@ if [[ -n $dbname ]]
 then 
     if [[ -d "./Databases/$dbname" ]]
     then
-        
-
+        export $dbname
         cd  ./Databases/$dbname
-        echo $PWD
         select choice in "Create Table" "List Tables" "Drop Table" "Insert into Table" "Select From Table" "Delete From Table" "Exit"
         do 
         case $choice in 
                 "Create Table" )             
-                        pwd
                       . ../../createTb.sh
-                      pwd
-                       
                         break
                 ;;
                 "List Tables" )
-                    echo "sfsdf"
+                pwd
+                    . ../../listTb.sh
                         break
 
                 ;;
@@ -46,7 +42,7 @@ then
 
                 ;;
                 "Exit" )
-                exit
+                    exit
                 ;;
 
                 * )
