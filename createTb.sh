@@ -32,7 +32,7 @@ then
 
     fi
     echo "Nubmer of Columns :""$colnums" >>$tbname.md
-   # echo "Names of columns : ""$colname" >>$tbname.md
+    echo "Names of columns : " >>$tbname.md
     echo "$colname">> $tbname.md
 else 
     echo "Enter Vailed number"    

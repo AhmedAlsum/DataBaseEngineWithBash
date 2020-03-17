@@ -27,7 +27,7 @@ then
 
                 ;;
                 "Insert into Table" )
-                        echo "sdfsd"
+                       . ../../insertintotable.sh
                         break
 
                 ;;
